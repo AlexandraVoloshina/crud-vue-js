@@ -1,61 +1,31 @@
     {
-    "columns": ["Index", "Last Name", "First Name", "Age", "Job", "Address", "Actions"],
+    "columns": ["Index", "Last Name", "First Name", "Date of birthday", "Phone", "E-Mail", "Actions"],
     "persons": [{
-      "lname": "ADIASSA",
-      "fname": "Ethiel",
-      "age": 20,
-      "job": "Web Developer",
-      "address": "Lome-Togo"
-    }, {
-      "lname": "ADUFU",
-      "fname": "Patrick",
-      "age": 20,
-      "job": "Banker",
-      "address": "Senegal-Dakar"
-    }, {
-      "lname": "MOUTON",
-      "fname": "John",
-      "age": 28,
-      "job": "Scientist",
-      "address": "New-York/USA"
-    }, {
-      "lname": "SMITH",
-      "fname": "Luther",
-      "age": 18,
-      "job": "Pilot",
-      "address": "London/GB"
-    }, {
-      "lname": "WALTER",
-      "fname": "Ramses Peter",
-      "age": 38,
-      "job": "Doctor",
-      "address": "Paris/France"
-    }, {
-      "lname": "GEORGES",
-      "fname": "Luther",
-      "age": 45,
-      "job": "Musician",
-      "address": "Vienne"
-    }, {
-      "lname": "MICHAEL",
-      "fname": "Daven",
-      "age": 27,
-      "job": "Boxer",
-      "address": "Pekin/China"
-    }],
-    "bin": [],
-    "input": {
-      "lname": "WADE",
-      "fname": "Johnson",
-      "age": 38,
-      "job": "Comedian",
-      "address": "Roma/Italia"
+      "lname": "Vasya",
+      "fname": "Vasilev",
+      "datebirth": "24-12-1988",
+      "phone": "8-800-200-20-20",
+      "email": "vasya@gmail.com"
     },
-    "editInput": {
-      "lname": "",
-      "fname": "",
-      "age": 0,
-      "job": "",
-      "address": ""
-    }
+    {
+      "lname": "Petya",
+      "fname": "Petrov",
+      "datebirth": "12-12-1975",
+      "phone": "8-800-300-30-30",
+      "email": "petya@gmail.com"
+    },
+    {
+      "lname": "Nikolay",
+      "fname": "Nikolaev",
+      "datebirth": "01-01-1985",
+      "phone": "8-800-500-50-50",
+      "email": "kolya@gmail.com"
+    },
+    {
+      "lname": "Stanislav",
+      "fname": "Stanislaev",
+      "datebirth": "02-02-1990",
+      "phone": "8-800-700-70-70",
+      "email": "stas@gmail.com"
+    } ]
   }

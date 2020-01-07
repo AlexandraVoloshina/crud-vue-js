@@ -14,16 +14,16 @@
           <input placeholder="First Name" v-model="addFirstName" type="text">
         </td>
         <td>
-          <label>Age</label><br>
-          <input placeholder="Age" v-model="addUserAge" type="text">
+          <label>Birthday</label><br>
+          <input placeholder="Birthday" v-model="addUserBirthDay" type="text">
           </td>
         <td>
-          <label>Job</label><br>
-          <input placeholder="Job" v-model="addUserJob" type="text">
+          <label>Phone</label><br>
+          <input placeholder="Phone" v-model="addUserPhone" type="text">
         </td>
         <td>
-          <label>Address</label><br>
-          <input placeholder="Address" v-model="addUserAddress" type="text">
+          <label>E-Mail</label><br>
+          <input placeholder="E-Mail" v-model="addUserEmail" type="text">
         </td>
         <td><label></label><br><a class="buttons" v-on:click="add()">ADD</a></td>
       </tr>
@@ -50,13 +50,13 @@
           {{person.fname}}
         </td>
         <td>
-          {{person.age}} years
+          {{person.datebirth}} years
         </td>
         <td>
-          {{person.job}}
+          {{person.phone}}
         </td>
         <td>
-          {{person.address}}
+          {{person.email}}
         </td>
         <td style="width: 18%;">
           <a class="buttons" v-on:click="edit(index)">edit</a>
@@ -79,16 +79,16 @@
           <input placeholder="First Name" v-model="firstName" type="text">
         </td>
         <td>
-          <label>Age</label><br>
-          <input placeholder="Age" v-model="userAge" type="text">
+          <label>Birthday</label><br>
+          <input placeholder="Birthday" v-model="userBirthDay" type="text">
         </td>
         <td>
-          <label>Job</label><br>
-          <input placeholder="Job" v-model="userJob" type="text">
+          <label>Phone</label><br>
+          <input placeholder="Phone" v-model="userPhone" type="text">
         </td>
         <td>
-          <label>Address</label><br>
-          <input placeholder="Address" v-model="userAddress" type="text">
+          <label>E-Mail</label><br>
+          <input placeholder="E-Mail" v-model="userEmail" type="text">
         </td>
         <td><label></label><br><a class="buttons" v-on:click="update(index)">Update</a></td>
       </tr>
@@ -110,15 +110,15 @@ export default {
     return{
         lastName: "",
         firstName: "",
-        userAge: "",
-        userJob: "",
-        userAddress: "",
+        userBirthDay: "",
+        userPhone: "",
+        userEmail: "",
         updateUser: {
           "lname": "",
           "fname": "",
-          "age": undefined,
-          "job": "",
-          "address": ""
+          "datebirth": undefined,
+          "phone": "",
+          "email": ""
         },
         addUser: new Object(),
         id: undefined,
@@ -136,42 +136,42 @@ export default {
     edit: function(index){
       this.lastName = this.persons.persons[index].lname;
       this.firstName = this.persons.persons[index].fname;
-      this.userAge = this.persons.persons[index].age;
-      this.userJob = this.persons.persons[index].job;
-      this.userAddress = this.persons.persons[index].address;
+      this.userBirthDay = this.persons.persons[index].datebirth;
+      this.userPhone = this.persons.persons[index].phone;
+      this.userEmail = this.persons.persons[index].email;
       this.id = index;
     },
 
     update: function(){
       this.updateUser.lname = this.lastName;
       this.updateUser.fname = this.firstName;
-      this.updateUser.age = this.userAge;
-      this.updateUser.job = this.userJob;
-      this.updateUser.address = this.userAddress;
+      this.updateUser.datebirth = this.userBirthDay;
+      this.updateUser.phone = this.userPhone;
+      this.updateUser.email = this.userEmail;
 
       this.persons.persons.splice(this.id, 1, this.updateUser);
 
       this.lastName = "";
       this.firstName = "";
-      this.userAge = undefined;
-      this.userJob = "";
-      this.userAddress = "";
+      this.userBirthDay = undefined;
+      this.userPhone = "";
+      this.userEmail = "";
     },
 
     add: function(){
       this.persons.persons.push({
         lname: this.addLastName,
         fname: this.addFirstName,
-        age: this.addUserAge,
-        job: this.addUserJob,
-        address: this.addUserAddress
+        datebirth: this.addUserBirthDay,
+        phone: this.addUserPhone,
+        email: this.addUserEmail
       });
 
       this.addLastName = "";
       this.addFirstName = "";
-      this.addUserAge = undefined;
-      this.addUserJob = "";
-      this.addUserAddress = "";
+      this.addUserBirthDay = undefined;
+      this.addUserPhone = "";
+      this.addUserEmail = "";
     }
   }
 }
